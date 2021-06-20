@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  padding: 50px;
+}
+
+/* -- desktop --- */
+
+.header {
+  background-color: black;
+  border-top-right-radius: 45px;
+  border-top-left-radius: 45px;
+  height: 300px;
+}
+
+.carousel {
+  width: 100%;
+  border-top-right-radius: 45px;
+  border-top-left-radius: 45px;
+  background-color: red;
+  height: 300px;
+  display: flex;
+  color: white;
+}
+
+.carousel--description {
+  width: 30%;
+  height: inherit;
+  background-color: black;
+  border-top-right-radius: 45px;
+  flex: 5;
+}
+
+.carousel--image {
+  width: 70%;
+  height: inherit;
+  background-color: green;
+  border-top-left-radius: 45px;
+  flex: 8;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.line {
+  position: relative;
+  width: 2px;
+  height: 20px;
+  background-color: wheat;
+}
+/* --- mobile --- */
+
+@media only screen and (max-width: 600px) {
+  .header {
+    width: 100%;
+    background-color: black;
+  }
+}
