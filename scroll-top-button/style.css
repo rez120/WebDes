@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 p {
   width: 400px;
   border-radius: 20px;
@@ -8,4 +12,24 @@ p {
   margin-top: 40px;
   margin-left: 10px;
   margin-bottom: 60px;
+}
+
+.to-top-img {
+  width: 80px;
+  height: 80px;
+}
+
+.to-top {
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  opacity: 0;
+  pointer-events: none; /* cool stuff */
+  transition: all 0.4s;
+}
+
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
 }
