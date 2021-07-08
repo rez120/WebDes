@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  height: 2000px;
+  background-image: linear-gradient(to right, grey, rgb(194, 192, 192));
+}
+
+.shape {
+  width: 70px;
+  height: 70px;
+  background-color: orange;
+  border-radius: 50px;
+}
+
+/* ---------------------------------------------- */
+
+.header {
+  width: 100%;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  min-height: 100px;
+  position: fixed;
+  transition: 0.5s;
+}
+
+.header-logo {
+  width: 120px;
+}
+
+.header-title-and-description {
+  min-width: 200px;
+}
+
+.header-list {
+  display: flex;
+  background-color: blue;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: inherit;
+  flex: 1;
+}
+
+.header-list-item {
+  flex: 1;
+  display: block;
+  min-width: 120px;
+  background-color: pink;
+  text-align: center;
+  min-height: inherit;
+}
+.header-list-item:hover {
+  display: block;
+  min-width: 120px;
+  background-color: red;
+  text-align: center;
+}
+
+/* ----------------- */
+
+.header-scrolling-active {
+  background-color: green;
+  box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1s);
+  min-height: 0px;
+  height: 20px;
+}
+
+.header-scrolling-active ul,
+.header-scrolling-active .header-title-and-description {
+  background-color: green;
+  box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1s);
+  display: none;
+}
+
+.header-scrolling-active:hover {
+  background-color: red;
+  box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1s);
+}
