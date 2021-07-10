@@ -4,29 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
     <header class="header">
-      <div class="header-item header-logo"><div class="shape"></div></div>
-      <div class="header-item header-title-and-description">
-        <div class="header-title">Lacanism</div>
-        <div class="header-description">Lacanian Psychology</div>
+      <div class="header-content-area">
+        <div class="header-nav-section">
+          <div class="header-logo">
+            <img
+              class="header-logo-image"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Apple_logo_grey.svg/505px-Apple_logo_grey.svg.png"
+              alt="logo"
+            />
+          </div>
+          <div class="header-meta-section">
+            <div class="header-title">Apple</div>
+            <div class="header-description">Technology of Tomorrow</div>
+          </div>
+          <ul class="header-navbar">
+            <li class="header-navbar-item"><div>Home</div></li>
+            <li class="header-navbar-item"><div>Contact Us</div></li>
+            <li class="header-navbar-item"><div>About US</div></li>
+          </ul>
+        </div>
+        <div class="header-search-section">
+          <form class="header-search-form" action="">
+            <input class="header-search-field" type="text" name="" id="" />
+            <input class="header-search-submit" type="submit" value="search" />
+          </form>
+        </div>
       </div>
-      <ul class="header-item header-list">
-        <li class="header-list-item">Home</li>
-        <li class="header-list-item">Articles</li>
-        <li class="header-list-item">Contact Us</li>
-        <li class="header-list-item">About Us</li>
-      </ul>
     </header>
-    <script>
-      window.addEventListener("scroll", function () {
-        let header = document.querySelector("header");
-        let windowPosition = window.scrollY > 0;
-        header.classList.toggle("header-scrolling-active", windowPosition);
-      });
-    </script>
   </body>
 </html>
