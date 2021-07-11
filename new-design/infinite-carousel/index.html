@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="carousel">
+        <div class="slider">
+          <section>content for section 1</section>
+          <section>content for section 2</section>
+          <section>content for section 3</section>
+          <section>content for section 4</section>
+          <section>content for section 5</section>
+        </div>
+        <div class="controls">
+          <span class="arrow prev">prev</span>
+          <span class="arrow next">next</span>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const slider = document.querySelector(".slider");
+    const prev = document.querySelector(".prev");
+    const next = document.querySelector(".next");
+    const carousel = document.querySelector(".carousel");
+
+    var direction;
+
+    next.addEventListener("click", () => {
+      direction = -1;
+      carousel.style.justifyContent = "flex-start";
+      slider.style.transform = "translate(-20%)";
+    });
+
+    prev.addEventListener("click", () => {
+      if (direction == -1) {
+        slider.appendChild(slider.firstElementChild);
+        direction = 1;
+      }
+      carousel.style.justifyContent = "flex-end";
+      slider.style.transform = "translate(20%)";
+    });
+
+    slider.addEventListener("transitionend", () => {
+      if (direction == -1) {
+        slider.appendChild(slider.firstElementChild);
+      } else if (direction == 1) {
+        slider.prepend(slider.lastElementChild);
+      }
+
+      slider.style.transition = "none";
+      slider.style.transform = "translate(0)";
+
+      setTimeout(() => {
+        slider.style.transition = "all 0.5s";
+      });
+    });
+  </script>
+</html>
