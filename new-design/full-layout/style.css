@@ -1,0 +1,155 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: vazir;
+}
+
+@font-face {
+  font-family: vazir;
+  src: url(font/vazir-font-v16.1.0/Vazir.ttf);
+}
+
+html {
+  height: 100%;
+  min-height: 100%;
+  background-color: yellow;
+}
+
+body {
+  min-height: 100%;
+  background-color: whitesmoke;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.width-controller {
+  max-width: 1160px;
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  max-height: 100px;
+  overflow: hidden;
+  transition: 0.7s linear;
+}
+.header-toggle-active {
+  max-height: 440px;
+}
+.header-content {
+  padding: 15px 20px;
+  background-color: tomato;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  grid-template-areas:
+    "header-logo header-info header-burger"
+    "header-navbar header-navbar header-navbar"
+    "header-search header-search header-search";
+  gap: 10px;
+}
+
+.header-logo {
+  grid-area: header-logo;
+  background-color: thistle;
+}
+.header-logo-img {
+  width: 60px;
+  width: 60px;
+}
+
+.header-info {
+  grid-area: header-info;
+  background-color: thistle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-title {
+  font-size: 24px;
+}
+
+.header-description {
+  font-size: 16px;
+}
+
+.header-burger {
+  grid-area: header-burger;
+  background-color: violet;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+
+.header-burger .burger {
+  height: 35px;
+  width: 40px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  /* background-color: blue; */
+  justify-content: space-around;
+
+  transition: 0.6s;
+}
+
+.burger-toggle-active {
+  transform: rotateZ(-90deg);
+}
+
+.header-burger .burger .burger-line {
+  height: 5px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: black;
+}
+
+.header-navbar {
+  background-color: burlywood;
+  grid-area: header-navbar;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 16px;
+  gap: 10px;
+}
+
+.header-search {
+  grid-area: header-search;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 7px;
+}
+.content {
+  background-color: blueviolet;
+}
+
+.footer {
+  background-color: cadetblue;
+}
+
+.search-field {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}
+
+.search-submit {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: gold;
+}
