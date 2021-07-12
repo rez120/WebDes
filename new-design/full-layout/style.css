@@ -7,11 +7,11 @@
 
 @font-face {
   font-family: vazir;
-  src: url(font/vazir-font-v16.1.0/Vazir.ttf);
+  src: url(Vazir.ttf);
 }
 
 html {
-  height: 100%;
+  height: 200%;
   min-height: 100%;
   background-color: yellow;
 }
@@ -42,9 +42,17 @@ body {
   max-height: 100px;
   overflow: hidden;
   transition: 0.7s linear;
+  /* position: fixed; */
+  width: 100%;
+  height: 100%;
 }
 .header-toggle-active {
   max-height: 440px;
+}
+
+.header-scrolled {
+  position: fixed;
+  background-color: black;
 }
 .header-content {
   padding: 15px 20px;
@@ -55,6 +63,7 @@ body {
     "header-logo header-info header-burger"
     "header-navbar header-navbar header-navbar"
     "header-search header-search header-search";
+
   gap: 10px;
 }
 
@@ -152,4 +161,35 @@ body {
   border: none;
   border-radius: 8px;
   background-color: gold;
+}
+
+@media all and (min-width: 992px) {
+  .header-burger {
+    display: none;
+  }
+  .header-content {
+    background-color: tomato;
+    display: grid;
+    grid-template-columns: auto auto auto 1fr;
+    grid-template-areas: "header-logo header-info header-navbar header-search";
+
+    gap: 14px;
+  }
+
+  .header-navbar {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .header-search {
+    align-content: center;
+    grid-template-columns: auto auto;
+    justify-content: flex-end;
+  }
+
+  .search-field {
+    width: 270px;
+  }
 }
