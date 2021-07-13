@@ -30,6 +30,9 @@
     const prev = document.querySelector(".prev");
     const next = document.querySelector(".next");
     const carousel = document.querySelector(".carousel");
+    var intervalID = window.setInterval(() => {
+      document.querySelector(".next").click();
+    }, 4000);
 
     var direction;
 

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: "a b" "c c";
+        gap: 16px;
+        background-color: grey;
+        position: relative;
+      }
+
+      .item {
+        background-color: lightskyblue;
+        padding: 30px;
+      }
+
+      .item1 {
+        background-color: pink;
+        grid-area: a;
+      }
+
+      .item2 {
+        background-color: violet;
+        grid-area: b;
+      }
+
+      .item3 {
+        background-color: orange;
+        grid-area: c;
+        position: absolute;
+        /* z-index: -1; */
+        transform: translateY(-100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+    </div>
+  </body>
+</html>
