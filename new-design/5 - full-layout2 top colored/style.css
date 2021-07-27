@@ -213,9 +213,6 @@ body {
   gap: 2px;
 }
 
-.header li .item-text {
-}
-
 .header li .item-bar {
   width: 0px;
   height: 4px;
